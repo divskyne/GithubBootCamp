@@ -1,0 +1,17 @@
+name: Meet and Greet
+description: Greet user and share current time
+
+inputs:
+  who-to-greet:
+    default: world
+    description: person to greet
+
+outputs:
+  time:
+    description: current time
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args: '${{ inputs.who-to-greet }}'
+  
